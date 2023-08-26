@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Animated Webpage</title>
+  <style>
+    /* CSS Variables */
+    :root {
+      --primary-color: #ff7f50;
+      --secondary-color: #3cb371;
+    }
+    
+    /* Layout */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    header, main, footer {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    header {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    main {
+      background-color: white;
+    }
+    
+    footer {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+    
+    /* Keyframe Animation */
+    @keyframes button-animation {
+      0% {
+        transform: scale(1);
+      }
+      
+      50% {
+        transform: scale(1.2);
+      }
+      
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    button {
+      background-color: var(--primary-color);
+      margin: 20px;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      animation: button-animation 1s infinite;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header, main, footer {
+        padding: 10px;
+      }
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    .button:hover {
+      background-color: #ff7f50;
+    }
+    
+    /* Card Styles */
+    .card {
+      background-color: var(--secondary-color);
+      border-radius: 8px;
+      color: white;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      animation: flip 2s infinite;
+      border: 8px solid var(--primary-color);
+      border-radius: 5px;
+    }
+    
+    @keyframes flip {
+      0% {
+        transform: rotateY(0);
+      }
+      50% {
+        transform: rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(0);
+      }
+    }
+    
+    .card:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Additional Animations */
+    .fade-in {
+      animation: fade-in 1s;
+    }
+    
+    .slide-in-left {
+      animation: slide-in-left 1s;
+    }
+    
+    .slide-in-right {
+      animation: slide-in-right 1s;
+    }
+    
+    .zoom-in {
+      animation: zoom-in 1s;
+    }
+    
+    .rotate {
+      animation: rotate 30s infinite linear;
+      transform-origin: center;
+    }
+    
+    .bounce {
+      animation: bounce 1s infinite;
+      transform-origin: bottom;
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    .shake {
+      animation: shake 0.5s infinite;
+    }
+    
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slide-in-left {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slide-in-right {
+      0% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes zoom-in {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+```html
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes shake {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-5px);
+      }
+      75% {
+        transform: translateX(5px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 24px;
+      }
+      .button {
+        font-size: 14px;
+      }
+      .card {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Animated Webpage</h1>
+  </header>
+  
+  <main>
+    <h2>Welcome to my webpage!</h2>
+    <p>This is a showcase of my CSS skills.</p>
+    <button>
+        Hello!
+    </button>
+    
+    <div class="card zoom-in">
+        <h2 class="bounce">Card Title</h2>
+        <p class="shake">This is a fantastic card with an animated flip effect.</p>
+      </div>
+      
+      <div class="card rotate">
+        <h2>Card Title</h2>
+        <p>This card rotates continuously.</p>
+      </div>
+      
+      <div class="card pulse">
+        <h2>Card Title</h2>
+        <p>This card pulsates with animation.</p>
+      </div>
+  </main>
+  
+  <footer>
+    <p>© 2023 My Webpage. All rights reserved.</p>
+  </footer>
+</body>
+</html>
